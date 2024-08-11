@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/images/image-waffle-desktop.jpg">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .title {
+      color: blue;
+    }
+    .page-container{
+      display: flex;
+      flex-direction: row;
+    }
+    .main-container{
+      width: 75%;
+      display: flex; 
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      /* text-align: center; */
+      justify-content:space-between;
+
+    }
+    .item { 
+      box-sizing: border-box;
+      border: 1px solid black;
+      padding: 10px;
+      margin: 5px 0; 
+      text-align: center;
+    }
+    .item-container{
+      border: 2px solid black;
+      width: 30%;
+      /* height: 50%; */
+      margin-bottom: 10px;
+    }
+    .right-container{
+      width: 25%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    img{
+      width: 100%;
+      margin: 0%;
+    }
+    button{
+      width: 80%;
+      margin: 0%;
+      border-radius: 7px;
+      padding: 5px;
+      border-color: brown;
+    }
+    p{
+      font-size: 10px;
+      align-items: flex-start;
+    }
+    .picture-button {
+      position: relative;
+    }
+    .picture-button img {
+      display: block;
+    }
+    .picture-button button {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .price-text {
+      margin-top: 45px;
+      
+    }
+    h6{
+      margin: 0%;
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+  <h1 class="title">
+  Desserts
+  </h1>
+
+<div class="page-container">
+  <div class="main-container">
+  
+    <div class="item-container">
+      <div class=".item">
+        <div class="picture-button">
+          <img src="./assets/images/image-waffle-desktop.jpg" alt="waffle photo">
+          <button>Add to Cart</button>
+        </div>
+        <p>Waffle</p>
+        <h6>Waffle with Berries</h6>
+        <div class="price-text">
+          <p>6.50</p>
+        </div>
+        </div>
+    </div>
+  
+    <div class="item-container">
+      <div class=".item">
+        <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="crepes photo">
+        <button>Add to Cart</button>
+        <h6>Vanilla Bean Crème</h6> Brûlée
+        <p>Crème Brulee</p>
+        <p>7.00</p>
+       
+      </div>
+    </div>
+      
+      <div class="item-container">
+        <div class=".item">
+        <h6>Macaron Mix of Five</h6>e
+        <p>Macaron</p>
+        <p>8.00</p>
+        <button>Add to Cart</button> 
+            </div>
+      </div>
+  
+    <div class="item-container">
+      <div class=".item">
+        <h6>Classic Tiramisu</h6>
+        <p>Tiramisu</p>
+        <p>5.50</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="item-container">
+      <div class=".item">
+        <h6>Pistachio Baklava</h6>
+        <p>Baklava</p>
+        <p>4.00</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="item-container">
+      <div class=".item">
+        <h6>Lemon Meringue Pie</h6>
+        <p>Pie</p>
+        <p>5.00</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="item-container">
+      <div class=".item">
+        <h6>Red Velvet Cake</h6>
+        <p>Cake</p>
+        <p>4.50</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="item-container">
+      <div class=".item">
+        <h6>Salted Caramel Brownie</h6>
+        <p>Brownie</p>
+        <p>4.50</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="item-container">
+      <div class=".item">
+        <h6>Vanilla Panna Cotta</h6>
+        <p>Panna Cotta</p>
+        <p>6.50</p>
+        <button>Add to Cart</button>
+      </div>
+        </div>
+    </div>
+
+  <div class="right-container">
+  
+      Your Cart (<!-- Quantity -->)
+      Your added items will appear here
+  </div>
+
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">JP Grineau</a>.
+  </div>
+</body>
+</html>
