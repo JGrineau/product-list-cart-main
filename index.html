@@ -33,14 +33,9 @@
       /* text-align: center; */
       justify-content:space-between;
 
+      margin-top: 5%;
+
     }
-    /* .item { 
-      box-sizing: border-box;
-      border: 1px solid black;
-      padding: 10px;
-      margin: 5px 0; 
-      text-align: center;
-    } */
     .item{
       font-size: 50px;
     }
@@ -54,8 +49,26 @@
     .right-container{
       width: 25%;
       box-sizing: border-box;
+      border: 2px solid black;
+
+      border-radius: 5%;
       padding: 10px;
-      margin: 10%;
+      /* margin: 10%; */
+      margin-left: 1%;
+      margin-bottom: 75%;
+      
+    }
+    .right-container img{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .cart-title{
+      font-size: 25px;
     }
     
     img{
@@ -118,6 +131,12 @@
       padding: 0%;
       margin-bottom: 2%;
 
+    }
+    .add-to-cart-icon{
+      width:20%
+    }
+    i{
+      color: brown;
     }
     
   </style>
@@ -257,8 +276,9 @@
 
   <div class="right-container">
   
-      Your Cart (<!-- Quantity -->)
-      Your added items will appear here
+      <p class="cart-title">Your Cart (<!-- Quantity -->)</p>
+      <img src="assets/images/illustration-empty-cart.svg" alt="">
+      <p class="cart-items">Your added items will appear here</p>
   </div>
 
 </div>
