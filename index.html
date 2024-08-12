@@ -13,14 +13,21 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: antiquewhite;
+      margin: 0%;
+      padding: 0%;
+    }
     .title {
-      font-size: 50px;
+      font-size: 20px;
+      margin-left: 5%;
     }
     
     .page-container{
       display: flex;
       flex-direction: row;
       margin: 5%;
+      
     }
     .page-container.title{
       flex-direction: column;
@@ -32,12 +39,14 @@
       flex-wrap: wrap; 
       /* text-align: center; */
       justify-content:space-between;
+      
 
       margin-top: 5%;
 
     }
     .item{
       font-size: 50px;
+      margin-bottom: 20px;
     }
     .item-container{
       /* border: 2px solid black; */
@@ -49,7 +58,7 @@
     .right-container{
       width: 25%;
       box-sizing: border-box;
-      border: 2px solid black;
+      /* border: 2px solid black; */
       display: flex;
       flex-direction: column;
       border-radius: 5%;
@@ -57,12 +66,14 @@
       /* margin: 10%; */
       margin-left: 1%;
       margin-bottom: 75%;
+      background-color: #fff;
       
     }
     .right-title{
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+      font-weight: bold;
     }
     .right-content{
       display: flex;
@@ -113,6 +124,12 @@
       left: 50%;
       transform: translateX(-50%);
       width: 60%;
+      
+    }
+    .picture-button button:hover {
+      width: 62%;
+      font-size: 20px;
+      cursor: pointer;
     }
     .price-text {
       margin-top: 45px;
@@ -152,155 +169,159 @@
     
   </style>
 </head>
+
 <body>
 
-  <h1 class="title">
-    Desserts
-    </h1>
   
-<div class="page-container">
-  
-  <div class="main-container">
+    <div class="title">
+      <h1 >
+        Desserts
+        </h1>
+    </div>
     
-    <div class="item-container">
-      
-      <div class="item">
-        <div class="picture-button">
-          <img src="./assets/images/image-waffle-desktop.jpg" alt="waffle photo">
-          <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-          
-        </div>
-        <p class="type">Waffle</p>
-        <p class="name">Waffle with Berries</p>
-        <p class="price-text">$6.50</p>
-        
-        </div>
-    </div>
-  
-    <div class="item-container">
-      <div class="item">
-        <div class="picture-button">
-          <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="crepes photo">
-          <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-        </div>
-        <p class="type">Crème Brûlée</p>
-        <p class="name">Vanilla Bean Crème</p> 
-        <p class="price-text">$7.00</p>
-       
+    <div class="page-container">
+    
+    <div class="main-container">
+    
+      <div class="item-container">
+    
+        <div class="item">
+          <div class="picture-button">
+            <img src="./assets/images/image-waffle-desktop.jpg" alt="waffle photo">
+            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+    
+          </div>
+          <p class="type">Waffle</p>
+          <p class="name">Waffle with Berries</p>
+          <p class="price-text">$6.50</p>
+    
+          </div>
       </div>
-    </div>
-      
+    
       <div class="item-container">
         <div class="item">
           <div class="picture-button">
-            <img src="./assets/images/image-macaron-desktop.jpg" alt="crepes photo">
+            <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="crepes photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
           </div>
-        
-        <p class="type">Macaron</p>
-        <p class="name">Macaron Mix of Five</p>
-        <p class="price-text">$8.00</p>
-        
+          <p class="type">Crème Brûlée</p>
+          <p class="name">Vanilla Bean Crème</p>
+          <p class="price-text">$7.00</p>
+    
+        </div>
+      </div>
+    
+        <div class="item-container">
+          <div class="item">
+            <div class="picture-button">
+              <img src="./assets/images/image-macaron-desktop.jpg" alt="crepes photo">
+              <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
             </div>
-      </div>
-  
-    <div class="item-container">
-      <div class="item">
-        <div class="picture-button">
-          <img src="./assets/images/image-tiramisu-desktop.jpg" alt="crepes photo">
-          <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+    
+          <p class="type">Macaron</p>
+          <p class="name">Macaron Mix of Five</p>
+          <p class="price-text">$8.00</p>
+    
+              </div>
         </div>
-        <p class="type">Tiramisu</p>
-        <p class="name">Classic Tiramisu</p>
-        <p class="price-text">$5.50</p>
-        
+    
+      <div class="item-container">
+        <div class="item">
+          <div class="picture-button">
+            <img src="./assets/images/image-tiramisu-desktop.jpg" alt="crepes photo">
+            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+          </div>
+          <p class="type">Tiramisu</p>
+          <p class="name">Classic Tiramisu</p>
+          <p class="price-text">$5.50</p>
+    
+        </div>
       </div>
+    
+      <div class="item-container">
+        <div class="item">
+          <div class="picture-button">
+            <img src="./assets/images/image-baklava-desktop.jpg" alt="crepes photo">
+            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+          </div>
+          <p class="type">Baklava</p>
+          <p class="name">Pistachio Baklava</p>
+          <p class="price-text">$4.00</p>
+    
+        </div>
+      </div>
+    
+      <div class="item-container">
+        <div class="item">
+          <div class="picture-button">
+            <img src="./assets/images/image-meringue-desktop.jpg" alt="crepes photo">
+            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+          </div>
+          <p class="type">Pie</p>
+          <p class="name">Lemon Meringue Pie</p>
+          <p class="price-text">$5.00</p>
+    
+        </div>
+      </div>
+    
+      <div class="item-container">
+        <div class="item">
+          <div class="picture-button">
+            <img src="./assets/images/image-cake-desktop.jpg" alt="crepes photo">
+            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+          </div>
+          <p class="type">Cake</p>
+          <p class="name">Red Velvet Cake</p>
+          <p class="price-text">$4.50</p>
+    
+        </div>
+      </div>
+    
+      <div class="item-container">
+        <div class="item">
+          <div class="picture-button">
+            <img src="./assets/images/image-brownie-desktop.jpg" alt="crepes photo">
+            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+          </div>
+    
+          <p class="type">Brownie</p>
+          <p class="name">Salted Caramel Brownie</p>
+          <p class="price-text">$4.50</p>
+    
+        </div>
+      </div>
+    
+      <div class="item-container">
+        <div class="item">
+          <div class="picture-button">
+            <img src="./assets/images//image-panna-cotta-desktop.jpg" alt="crepes photo">
+            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+          </div>
+    
+          <p class="type">Panna Cotta</p>
+          <p class="name">Vanilla Panna Cotta</p>
+          <p class="price-text">$6.50</p>
+    
+        </div>
+          </div>
+      </div>
+    <div class="right-container">
+    
+        <div class="right-title">
+          <p class="cart-title">Your Cart (<!-- Quantity -->)</p>
+        </div>
+        <div class="right-content">
+          <img src="assets/images/illustration-empty-cart.svg" alt="empty-cart-picture">
+          <p class="cart-items">Your added items will appear here</p>
+        </div>
+    </div>
+    
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">JP Grineau</a>.
     </div>
   
-    <div class="item-container">
-      <div class="item">
-        <div class="picture-button">
-          <img src="./assets/images/image-baklava-desktop.jpg" alt="crepes photo">
-          <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-        </div>
-        <p class="type">Baklava</p>
-        <p class="name">Pistachio Baklava</p>
-        <p class="price-text">$4.00</p>
-        
-      </div>
-    </div>
-  
-    <div class="item-container">
-      <div class="item">
-        <div class="picture-button">
-          <img src="./assets/images/image-meringue-desktop.jpg" alt="crepes photo">
-          <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-        </div>
-        <p class="type">Pie</p>
-        <p class="name">Lemon Meringue Pie</p>
-        <p class="price-text">$5.00</p>
-        
-      </div>
-    </div>
-  
-    <div class="item-container">
-      <div class="item">
-        <div class="picture-button">
-          <img src="./assets/images/image-cake-desktop.jpg" alt="crepes photo">
-          <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-        </div>
-        <p class="type">Cake</p>
-        <p class="name">Red Velvet Cake</p>
-        <p class="price-text">$4.50</p>
-        
-      </div>
-    </div>
-  
-    <div class="item-container">
-      <div class="item">
-        <div class="picture-button">
-          <img src="./assets/images/image-brownie-desktop.jpg" alt="crepes photo">
-          <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-        </div>
-        
-        <p class="type">Brownie</p>
-        <p class="name">Salted Caramel Brownie</p>
-        <p class="price-text">$4.50</p>
-        
-      </div>
-    </div>
-  
-    <div class="item-container">
-      <div class="item">
-        <div class="picture-button">
-          <img src="./assets/images//image-panna-cotta-desktop.jpg" alt="crepes photo">
-          <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-        </div>
-        
-        <p class="type">Panna Cotta</p>
-        <p class="name">Vanilla Panna Cotta</p>
-        <p class="price-text">$6.50</p>
-        
-      </div>
-        </div>
-    </div>
-
-  <div class="right-container">
-  
-      <div class="right-title">
-        <p class="cart-title">Your Cart (<!-- Quantity -->)</p>
-      </div>
-      <div class="right-content">
-        <img src="assets/images/illustration-empty-cart.svg" alt="empty-cart-picture">
-        <p class="cart-items">Your added items will appear here</p>
-      </div>
-  </div>
-
-</div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">JP Grineau</a>.
-  </div>
 </body>
+
 </html>
