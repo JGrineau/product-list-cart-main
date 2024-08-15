@@ -20,7 +20,7 @@
     }
     .title {
       font-size: 20px;
-      margin-left: 5%;
+      margin-left: 5% 
     }
     
     .page-container{
@@ -323,5 +323,12 @@
     </div>
   
 </body>
+<script>
+  const cartButton = document.querySelectorAll('.picture-button button');
+  cartButton.forEach(button => {
+    button.addEventListener('click', () => {
+      const cartItems = document.querySelector('.right-content');
+    }
+</script>
 
 </html>
