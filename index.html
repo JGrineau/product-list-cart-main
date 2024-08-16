@@ -18,9 +18,11 @@
       margin: 0%;
       padding: 0%;
     }
-    .title {
-      font-size: 20px;
-      margin-left: 5% 
+    .page-title {
+      font-size: 24px;
+      text-align: left;
+      margin-top: 20px;
+      margin-left: 5%;
     }
     
     .page-container{
@@ -44,11 +46,11 @@
       margin-top: 5%;
 
     }
-    .item{
+    .product-item{
       font-size: 50px;
       margin-bottom: 20px;
     }
-    .item-container{
+    .product-item-container{
       /* border: 2px solid black; */
       border-radius: 5%;
       width: 30%;
@@ -72,13 +74,13 @@
     .right-title{
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-product-items: flex-start;
       font-weight: bold;
     }
     .right-content{
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-product-items: center;
     }
     .right-content p{
       font-size: 20px;
@@ -110,7 +112,7 @@
     }
     p{
       font-size: 10px;
-      align-items: flex-start;
+      align-product-items: flex-start;
     }
     .picture-button {
       position: relative;
@@ -173,7 +175,7 @@
 <body>
 
   
-    <div class="title">
+    <div class="page-title">
       <h1 >
         Desserts
         </h1>
@@ -183,9 +185,9 @@
     
     <div class="main-container">
     
-      <div class="item-container">
+      <div class="product-item-container">
     
-        <div class="item">
+        <div class="product-item">
           <div class="picture-button">
             <img src="./assets/images/image-waffle-desktop.jpg" alt="waffle photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -198,8 +200,8 @@
           </div>
       </div>
     
-      <div class="item-container">
-        <div class="item">
+      <div class="product-item-container">
+        <div class="product-item">
           <div class="picture-button">
             <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="crepes photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -207,12 +209,11 @@
           <p class="type">Crème Brûlée</p>
           <p class="name">Vanilla Bean Crème</p>
           <p class="price-text">$7.00</p>
-    
         </div>
       </div>
     
-        <div class="item-container">
-          <div class="item">
+        <div class="product-item-container">
+          <div class="product-item">
             <div class="picture-button">
               <img src="./assets/images/image-macaron-desktop.jpg" alt="crepes photo">
               <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -225,8 +226,8 @@
               </div>
         </div>
     
-      <div class="item-container">
-        <div class="item">
+      <div class="product-item-container">
+        <div class="product-item">
           <div class="picture-button">
             <img src="./assets/images/image-tiramisu-desktop.jpg" alt="crepes photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -238,8 +239,8 @@
         </div>
       </div>
     
-      <div class="item-container">
-        <div class="item">
+      <div class="product-item-container">
+        <div class="product-item">
           <div class="picture-button">
             <img src="./assets/images/image-baklava-desktop.jpg" alt="crepes photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -251,8 +252,8 @@
         </div>
       </div>
     
-      <div class="item-container">
-        <div class="item">
+      <div class="product-item-container">
+        <div class="product-item">
           <div class="picture-button">
             <img src="./assets/images/image-meringue-desktop.jpg" alt="crepes photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -264,8 +265,8 @@
         </div>
       </div>
     
-      <div class="item-container">
-        <div class="item">
+      <div class="product-item-container">
+        <div class="product-item">
           <div class="picture-button">
             <img src="./assets/images/image-cake-desktop.jpg" alt="crepes photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -277,8 +278,8 @@
         </div>
       </div>
     
-      <div class="item-container">
-        <div class="item">
+      <div class="product-item-container">
+        <div class="product-item">
           <div class="picture-button">
             <img src="./assets/images/image-brownie-desktop.jpg" alt="crepes photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -291,8 +292,8 @@
         </div>
       </div>
     
-      <div class="item-container">
-        <div class="item">
+      <div class="product-item-container">
+        <div class="product-item">
           <div class="picture-button">
             <img src="./assets/images//image-panna-cotta-desktop.jpg" alt="crepes photo">
             <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
@@ -308,11 +309,11 @@
     <div class="right-container">
     
         <div class="right-title">
-          <p class="cart-title">Your Cart (<!-- Quantity -->)</p>
+          <p class="cart-title">Your Cart (<span id="cart-quantity">0</span>)</p>
         </div>
         <div class="right-content">
           <img src="assets/images/illustration-empty-cart.svg" alt="empty-cart-picture">
-          <p class="cart-items">Your added items will appear here</p>
+          <p class="cart-product-items">Your added product-items will appear here</p>
         </div>
     </div>
     
@@ -321,14 +322,47 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">JP Grineau</a>.
     </div>
-  
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize an empty queue (array) for the cart product-items
+        const cartQueue = [];
+    
+        // Select all "Add to Cart" buttons
+        const cartButtons = document.querySelectorAll('.picture-button button');
+    
+        cartButtons.forEach(button => {
+          button.addEventListener('click', (event) => {
+            // Find the product-item details
+            const product-itemContainer = event.target.closest('.product-item-container');
+            const product-itemName = product-itemContainer.querySelector('.name').textContent;
+            const product-itemPrice = product-itemContainer.querySelector('.price-text').textContent;
+    
+            // Add the product-item to the queue
+            cartQueue.push({ name: product-itemName, price: product-itemPrice });
+    
+            // Update the cart UI
+            updateCartUI();
+          });
+        });
+    
+        function updateCartUI() {
+          // Get the cart list and clear it
+          const cartList = document.getElementById('cart-list');
+          cartList.innerHTML = '';
+    
+          // Update the cart product-items count
+          document.getElementById('cart-quantity').textContent = cartQueue.length;
+    
+          // Populate the cart list with product-items
+          cartQueue.forEach(product-item => {
+            const listproduct-item = document.createElement('li');
+            listproduct-item.textContent = `${product-item.name} - ${product-item.price}`;
+            cartList.appendChild(listproduct-item);
+          });
+        }
+      });
+    </script>
 </body>
-<script>
-  const cartButton = document.querySelectorAll('.picture-button button');
-  cartButton.forEach(button => {
-    button.addEventListener('click', () => {
-      const cartItems = document.querySelector('.right-content');
-    }
-</script>
+
 
 </html>
