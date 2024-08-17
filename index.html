@@ -11,358 +11,265 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    body{
+    body {
       background-color: antiquewhite;
-      margin: 0%;
-      padding: 0%;
-    }
-    .page-title {
-      font-size: 24px;
-      text-align: left;
-      margin-top: 20px;
-      margin-left: 5%;
-    }
-    
-    .page-container{
-      display: flex;
-      flex-direction: row;
-      margin: 5%;
-      
-    }
-    .page-container.title{
-      flex-direction: column;
-    }
-    .main-container{
-      width: 75%;
-      display: flex; 
-      flex-direction: row; 
-      flex-wrap: wrap; 
-      /* text-align: center; */
-      justify-content:space-between;
-      
-
-      margin-top: 5%;
-
-    }
-    .product-item{
-      font-size: 50px;
-      margin-bottom: 20px;
-    }
-    .product-item-container{
-      /* border: 2px solid black; */
-      border-radius: 5%;
-      width: 30%;
-      /* height: 50%; */
-      margin-bottom: 10px;
-    }
-    .right-container{
-      width: 25%;
-      box-sizing: border-box;
-      /* border: 2px solid black; */
-      display: flex;
-      flex-direction: column;
-      border-radius: 5%;
-      padding: 10px;
-      /* margin: 10%; */
-      margin-left: 1%;
-      margin-bottom: 75%;
-      background-color: #fff;
-      
-    }
-    .right-title{
-      display: flex;
-      flex-direction: row;
-      align-product-items: flex-start;
-      font-weight: bold;
-    }
-    .right-content{
-      display: flex;
-      flex-direction: column;
-      align-product-items: center;
-    }
-    .right-content p{
-      font-size: 20px;
-    }
-    .right-container img{
-    width: 40%;
-    
-    }
-
-    .cart-title{
-      font-size: 25px;
-      color:  brown;
-    }
-    
-    img{
-      width: 100%;
-      margin: 0%;
-      border-radius: 5%;
-    }
-    button{
-      width: 80%;
-      margin: 0%;
-      border-radius: 30px;
-      padding: 12px;
-      border-color: brown;
-      font-size: 18px;
-      font-weight: bold;
-      background-color: #fff;
-    }
-    p{
-      font-size: 10px;
-      align-product-items: flex-start;
-    }
-    .picture-button {
-      position: relative;
-    }
-    .picture-button img {
-      display: block;
-    }
-    .picture-button button {
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
-      
-    }
-    .picture-button button:hover {
-      width: 62%;
-      font-size: 20px;
-      cursor: pointer;
-    }
-    .price-text {
-      margin-top: 45px;
-      
-    }
-    h6{
-      margin: 0%;
-    }
-    .price-text {
-      font-size: 20px;
       margin: 0;
       padding: 0;
-      font-weight: bold;
-      color: brown;
+      font-family: Arial, sans-serif;
     }
-    .type{
-      font-size: 15px;
-      opacity: 50%;
-      margin: 0;
-      margin-top: 40px;
-      margin-bottom: 5%;
-    }
-    .name{
-      font-size: 20px;
-      font-weight: bold;
-      margin: 0%;
-      padding: 0%;
-      margin-bottom: 2%;
 
+    .page-title {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 20px;
     }
-    .add-to-cart-icon{
-      width:20%
+
+    .page-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
     }
-    i{
+
+    .product-list {
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product-item {
+      background-color: white;
+      border-radius: 10px;
+      width: calc(33% - 20px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .product-type {
+      font-size: 14px;
+      color: gray;
+      margin-bottom: 5px;
+    }
+
+    .product-price {
+      font-size: 16px;
       color: brown;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-    
+
+    .add-to-cart-button {
+      background-color: brown;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 80%;
+    }
+
+    .add-to-cart-button:hover {
+      background-color: darkbrown;
+    }
+
+    .cart-container {
+      width: 25%;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-title {
+      font-size: 20px;
+      color: brown;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .cart-items {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cart-item {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .cart-empty-message {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .cart-empty-image {
+      width: 50%;
+      margin-top: 20px;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
 
 <body>
 
-  
-    <div class="page-title">
-      <h1 >
-        Desserts
-        </h1>
+  <div class="page-title">
+    <h1>Desserts</h1>
+  </div>
+
+  <div class="page-container">
+    <div class="product-list">
+      <div class="product-item">
+        <img src="./assets/images/image-waffle-desktop.jpg" alt="Waffle" class="product-image">
+        <p class="product-type">Waffle</p>
+        <p class="product-name">Waffle with Berries</p>
+        <p class="product-price">$6.50</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="Crème Brûlée" class="product-image">
+        <p class="product-type">Crème Brûlée</p>
+        <p class="product-name">Vanilla Bean Crème</p>
+        <p class="product-price">$7.00</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <img src="./assets/images/image-macaron-desktop.jpg" alt="Macaron" class="product-image">
+        <p class="product-type">Macaron</p>
+        <p class="product-name">Macaron Mix of Five</p>
+        <p class="product-price">$8.00</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <img src="./assets/images/image-tiramisu-desktop.jpg" alt="Tiramisu" class="product-image">
+        <p class="product-type">Tiramisu</p>
+        <p class="product-name">Classic Tiramisu</p>
+        <p class="product-price">$5.50</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <img src="./assets/images/image-baklava-desktop.jpg" alt="Baklava" class="product-image">
+        <p class="product-type">Baklava</p>
+        <p class="product-name">Pistachio Baklava</p>
+        <p class="product-price">$4.00</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <img src="./assets/images/image-meringue-desktop.jpg" alt="Meringue" class="product-image">
+        <p class="product-type">Pie</p>
+        <p class="product-name">Lemon Meringue Pie</p>
+        <p class="product-price">$5.00</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <img src="./assets/images/image-cake-desktop.jpg" alt="Cake" class="product-image">
+        <p class="product-type">Cake</p>
+        <p class="product-name">Red Velvet Cake</p>
+        <p class="product-price">$4.50</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <img src="./assets/images/image-brownie-desktop.jpg" alt="Brownie" class="product-image">
+        <p class="product-type">Brownie</p>
+        <p class="product-name">Salted Caramel Brownie</p>
+        <p class="product-price">$4.50</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
+
+      <div class="product-item">
+        <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="Panna Cotta" class="product-image">
+        <p class="product-type">Panna Cotta</p>
+        <p class="product-name">Vanilla Panna Cotta</p>
+        <p class="product-price">$6.50</p>
+        <button class="add-to-cart-button"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
+      </div>
     </div>
-    
-    <div class="page-container">
-    
-    <div class="main-container">
-    
-      <div class="product-item-container">
-    
-        <div class="product-item">
-          <div class="picture-button">
-            <img src="./assets/images/image-waffle-desktop.jpg" alt="waffle photo">
-            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-    
-          </div>
-          <p class="type">Waffle</p>
-          <p class="name">Waffle with Berries</p>
-          <p class="price-text">$6.50</p>
-    
-          </div>
-      </div>
-    
-      <div class="product-item-container">
-        <div class="product-item">
-          <div class="picture-button">
-            <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="crepes photo">
-            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-          <p class="type">Crème Brûlée</p>
-          <p class="name">Vanilla Bean Crème</p>
-          <p class="price-text">$7.00</p>
-        </div>
-      </div>
-    
-        <div class="product-item-container">
-          <div class="product-item">
-            <div class="picture-button">
-              <img src="./assets/images/image-macaron-desktop.jpg" alt="crepes photo">
-              <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-            </div>
-    
-          <p class="type">Macaron</p>
-          <p class="name">Macaron Mix of Five</p>
-          <p class="price-text">$8.00</p>
-    
-              </div>
-        </div>
-    
-      <div class="product-item-container">
-        <div class="product-item">
-          <div class="picture-button">
-            <img src="./assets/images/image-tiramisu-desktop.jpg" alt="crepes photo">
-            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-          <p class="type">Tiramisu</p>
-          <p class="name">Classic Tiramisu</p>
-          <p class="price-text">$5.50</p>
-    
-        </div>
-      </div>
-    
-      <div class="product-item-container">
-        <div class="product-item">
-          <div class="picture-button">
-            <img src="./assets/images/image-baklava-desktop.jpg" alt="crepes photo">
-            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-          <p class="type">Baklava</p>
-          <p class="name">Pistachio Baklava</p>
-          <p class="price-text">$4.00</p>
-    
-        </div>
-      </div>
-    
-      <div class="product-item-container">
-        <div class="product-item">
-          <div class="picture-button">
-            <img src="./assets/images/image-meringue-desktop.jpg" alt="crepes photo">
-            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-          <p class="type">Pie</p>
-          <p class="name">Lemon Meringue Pie</p>
-          <p class="price-text">$5.00</p>
-    
-        </div>
-      </div>
-    
-      <div class="product-item-container">
-        <div class="product-item">
-          <div class="picture-button">
-            <img src="./assets/images/image-cake-desktop.jpg" alt="crepes photo">
-            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-          <p class="type">Cake</p>
-          <p class="name">Red Velvet Cake</p>
-          <p class="price-text">$4.50</p>
-    
-        </div>
-      </div>
-    
-      <div class="product-item-container">
-        <div class="product-item">
-          <div class="picture-button">
-            <img src="./assets/images/image-brownie-desktop.jpg" alt="crepes photo">
-            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-    
-          <p class="type">Brownie</p>
-          <p class="name">Salted Caramel Brownie</p>
-          <p class="price-text">$4.50</p>
-    
-        </div>
-      </div>
-    
-      <div class="product-item-container">
-        <div class="product-item">
-          <div class="picture-button">
-            <img src="./assets/images//image-panna-cotta-desktop.jpg" alt="crepes photo">
-            <button> <i class="fa-sharp fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-    
-          <p class="type">Panna Cotta</p>
-          <p class="name">Vanilla Panna Cotta</p>
-          <p class="price-text">$6.50</p>
-    
-        </div>
-          </div>
-      </div>
-    <div class="right-container">
-    
-        <div class="right-title">
-          <p class="cart-title">Your Cart (<span id="cart-quantity">0</span>)</p>
-        </div>
-        <div class="right-content">
-          <img src="assets/images/illustration-empty-cart.svg" alt="empty-cart-picture">
-          <p class="cart-product-items">Your added product-items will appear here</p>
-        </div>
+
+    <div class="cart-container">
+      <p class="cart-title">Your Cart (<span id="cart-quantity">0</span>)</p>
+      <ul class="cart-items" id="cart-list">
+        <li class="cart-empty-message">Your added items will appear here</li>
+      </ul>
     </div>
-    
-    </div>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">JP Grineau</a>.
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Initialize an empty queue (array) for the cart product-items
-        const cartQueue = [];
-    
-        // Select all "Add to Cart" buttons
-        const cartButtons = document.querySelectorAll('.picture-button button');
-    
-        cartButtons.forEach(button => {
-          button.addEventListener('click', (event) => {
-            // Find the product-item details
-            const product-itemContainer = event.target.closest('.product-item-container');
-            const product-itemName = product-itemContainer.querySelector('.name').textContent;
-            const product-itemPrice = product-itemContainer.querySelector('.price-text').textContent;
-    
-            // Add the product-item to the queue
-            cartQueue.push({ name: product-itemName, price: product-itemPrice });
-    
-            // Update the cart UI
-            updateCartUI();
-          });
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">JP Grineau</a>.
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cartQueue = [];
+
+      const cartButtons = document.querySelectorAll('.add-to-cart-button');
+
+      cartButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+          const productItem = event.target.closest('.product-item');
+          const itemName = productItem.querySelector('.product-name').textContent;
+          const itemPrice = productItem.querySelector('.product-price').textContent;
+
+          const cartItem = {
+            name: itemName,
+            price: itemPrice
+          };
+
+          cartQueue.push(cartItem);
+          updateCart();
         });
-    
-        function updateCartUI() {
-          // Get the cart list and clear it
-          const cartList = document.getElementById('cart-list');
-          cartList.innerHTML = '';
-    
-          // Update the cart product-items count
-          document.getElementById('cart-quantity').textContent = cartQueue.length;
-    
-          // Populate the cart list with product-items
-          cartQueue.forEach(product-item => {
-            const listproduct-item = document.createElement('li');
-            listproduct-item.textContent = `${product-item.name} - ${product-item.price}`;
-            cartList.appendChild(listproduct-item);
-          });
-        }
       });
-    </script>
+
+      function updateCart() {
+        const cartList = document.getElementById('cart-list');
+        const cartQuantity = document.getElementById('cart-quantity');
+
+        cartList.innerHTML = '';
+        cartQuantity.textContent = cartQueue.length;
+
+        cartQueue.forEach(item => {
+          const listItem = document.createElement('li');
+          listItem.classList.add('cart-item');
+          listItem.textContent = `${item.name} - ${item.price}`;
+          cartList.appendChild(listItem);
+        });
+
+        if (cartQueue.length === 0) {
+          const emptyMessage = document.createElement('li');
+          emptyMessage.classList.add('cart-empty-message');
+          emptyMessage.textContent = 'Your added items will appear here';
+          cartList.appendChild(emptyMessage);
+        }
+      }
+    });
+  </script>
 </body>
-
-
 </html>
