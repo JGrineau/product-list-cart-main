@@ -9,7 +9,7 @@
   
   <title>Frontend Mentor | Product list with cart by JP Grineau</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
   <style>
     body {
       background-color: antiquewhite;
@@ -87,18 +87,15 @@
       cursor: pointer;
       width: 65%;
       align-self: center;
-      /* margin-top: auto; */
+      
 
-
-      position: absolute; /* Position the button on top of the image */
-      bottom: 130px; /* Position the button at the bottom of the image */
+/*This is used to position the button on top of the photo*/
+      position: absolute; 
+      bottom: 130px; 
       left: 50%;
-      transform: translateX(-50%); /* Center the button horizontally */
+      transform: translateX(-50%); 
 }
     
-
-    
-
     .add-to-cart-button:hover {
       background-color: darkbrown;
     }
@@ -108,7 +105,8 @@
       background-color: white;
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* margin-bottom: 85%; */
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     }
 
     .cart-title {
@@ -153,6 +151,42 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+
+    /* Responsive adjustments */
+@media (max-width: 769px) {
+  .page-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .product-item {
+    width: calc(30% - 20px);
+   /* width: 100%;  */
+   flex-direction: column;
+  }
+  .product-list{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .product-list{
+    width: 100%;
+
+  }
+  .product-item{
+    width: 100%;
+  }
+  .cart-container{
+    flex-direction: column;
+    
+  }
+  .cart-items{
+    width: 100%;
+  }
+}
+
   </style>
 </head>
 
