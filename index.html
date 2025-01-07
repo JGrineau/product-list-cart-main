@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
@@ -127,6 +126,19 @@
     .cart-item {
       margin-bottom: 10px;
       font-size: 16px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .cart-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .cart-item.remove {
+      opacity: 0;
+      transform: translateY(10px);
     }
 
     .cart-empty-message {
@@ -152,6 +164,20 @@
       color: hsl(228, 45%, 44%);
     }
 
+    .remove-button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .remove-button:hover {
+      background-color: #ff1a1a;
+    }
 
     /* Responsive adjustments */
 @media (max-width: 769px) {
@@ -287,6 +313,7 @@
         <img src="./assets/images/illustration-empty-cart.svg" alt="Empty Cart" class="cart-empty-image"> 
         <li class="cart-empty-message">Your added items will appear here</li>
       </ul>
+      <p id="cart-total"></p>
     </div>
   </div>
 
@@ -320,6 +347,8 @@
       function updateCart() {
         const cartList = document.getElementById('cart-list');
         const cartQuantity = document.getElementById('cart-quantity');
+        const cartTotal = document.getElementById('cart-total');
+        let totalPrice = 0;
 
         cartList.innerHTML = '';
         cartQuantity.textContent = cartQueue.length;
@@ -328,8 +357,34 @@
           const listItem = document.createElement('li');
           listItem.classList.add('cart-item');
           listItem.textContent = `${item.name} - ${item.price}`;
+
+          // Create remove button
+          const removeButton = document.createElement('button');
+          removeButton.textContent = 'Remove';
+          removeButton.classList.add('remove-button');
+          removeButton.addEventListener('click', () => {
+            const itemIndex = cartQueue.indexOf(item);
+            if (itemIndex > -1) {
+              cartQueue.splice(itemIndex, 1);
+              updateCart();
+            }
+          });
+
+          listItem.appendChild(removeButton);
+
           cartList.appendChild(listItem);
+
+          // Add animation class
+          setTimeout(() => {
+            listItem.classList.add('show');
+          }, 0);
+
+          // Calculate total price
+          totalPrice += parseFloat(item.price.replace('$', ''));
         });
+
+        // Display total price
+        cartTotal.textContent = `Total: $${totalPrice.toFixed(2)}`;
 
         if (cartQueue.length === 0) {
           const emptyMessage = document.createElement('li');
