@@ -113,6 +113,9 @@
       color: brown;
       font-weight: bold;
       margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .cart-items {
@@ -177,6 +180,20 @@
 
     .remove-button:hover {
       background-color: #ff1a1a;
+    }
+
+    .remove-all-btn {
+      background-color: #ff4444;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .remove-all-btn:hover {
+      background-color: #cc0000;
     }
 
     /* Responsive adjustments */
@@ -308,7 +325,10 @@
     </div>
 
     <div class="cart-container">
-      <p class="cart-title">Your Cart (<span id="cart-quantity">0</span>)</p>
+      <div class="cart-title">
+        <span>Your Cart (<span id="cart-quantity">0</span>)</span>
+        <button class="remove-all-btn" onclick="removeAllItems()">Remove All</button>
+      </div>
       <ul class="cart-items" id="cart-list">
         <img src="./assets/images/illustration-empty-cart.svg" alt="Empty Cart" class="cart-empty-image"> 
         <li class="cart-empty-message">Your added items will appear here</li>
@@ -325,6 +345,13 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const cartQueue = [];
+
+      function removeAllItems() {
+        cartQueue.length = 0;
+        updateCart();
+      }
+
+      window.removeAllItems = removeAllItems;
 
       const cartButtons = document.querySelectorAll('.add-to-cart-button');
 
